@@ -1,10 +1,21 @@
-@import url("https://fonts.googleapis.com/css?family=Oswald:400,700");
+/* @import url("https://fonts.googleapis.com/css?family=Oswald:400,700"); */
+:root {
+  --time-tr: 0.5s;
+  --depth: 40px;
 
+  --accent-color: #33a3ee;
+  --accent-color-tone: #2982b9;
+
+  --mnu-color: #3e3f46;
+  --mnu-color-before: #2e3133;
+  --mnu-color-after: #35383e;
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Oswald", sans-serif;
+  font-family: sans-serif;
 }
 
 body {
@@ -23,50 +34,54 @@ ul {
 ul li {
   position: relative;
   list-style: none;
-  width: 200px;
-  background-color: #3e3f46;
+  min-width: 100px;
+  border-top: 1px solid var(--accent-color);
+  background-color: var(--mnu-color);
   padding: 15px;
   z-index: var(--i);
-  transition: 0.5s;
+  transition: var(--time-tr);
 }
 
 ul li:hover {
-  background: #33a3ee;
+  /* outline: 1px solid var(--mnu-color); */
+
+  background: var(--accent-color);
   transform: translateX(50px);
+  /* transition: var(--time-tr); */
 }
 
 ul li::before {
   content: "";
   position: absolute;
   top: 0;
-  left: -40px;
-  width: 40px;
+  left: calc(-1 * var(--depth));
+  width: var(--depth);
   height: 100%;
-  background: #2e3133;
+  background: var(--mnu-color-before);
   transform-origin: right;
   transform: skewY(45deg);
-  transition: 0.5s;
+  /* transition: var(--time-tr); */
 }
 
 ul li:hover::before {
-  background: #2982b9;
+  background: var(--accent-color-tone);
 }
 
 ul li::after {
   content: "";
   position: absolute;
-  top: -40px;
+  top: calc(-1 * var(--depth));
   left: 0;
   width: 100%;
-  height: 40px;
-  background: #35383e;
+  height: var(--depth);
+  background: var(--mnu-color-after);
   transform-origin: bottom;
   transform: skewX(45deg);
-  transition: 0.5s;
+  /* transition: var(--time-tr); */
 }
 
 ul li:hover::after {
-  background: #2982b9;
+  background: var(--accent-color-tone);
 }
 
 ul li a {
@@ -75,7 +90,7 @@ ul li a {
   display: block;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  transition: 0.5s;
+  transition: var(--time-tr);
 }
 
 ul li:hover a {
@@ -83,5 +98,5 @@ ul li:hover a {
 }
 
 ul li:last-child::after {
-  box-shadow: -120px 120px 20px rgba(0, 0, 0, .25);
+  box-shadow: -100px 100px 20px rgba(0, 0, 0, 0.5);
 }
