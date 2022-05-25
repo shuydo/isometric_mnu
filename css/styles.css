@@ -1,4 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css?family=Oswald:400,700"); */
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,700");
 :root {
   --time-tr: 0.25s;
 
@@ -20,7 +20,7 @@
   padding: 0;
   box-sizing: border-box;
   /* font-family: sans-serif; */
-  /* font-family: "Oswald", sans-serif; */
+  font-family: "Oswald", sans-serif;
   /* font-family: "Arial", sans-serif; */
   /* font-family: "Bahnschrift", sans-serif; */
   /* font-family: "Calibri", sans-serif; */
@@ -36,7 +36,7 @@
   /* font-family: "Gadugi", sans-serif; */
   /* font-family: "Georgia", sans-serif; */
   /* font-family: "HoloLens MDL2 Assets", sans-serif; */
-  font-family: "Impact", sans-serif;
+  /* font-family: "Impact", sans-serif; */
 }
 
 body {
