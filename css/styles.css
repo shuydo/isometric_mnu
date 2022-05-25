@@ -1,7 +1,12 @@
 /* @import url("https://fonts.googleapis.com/css?family=Oswald:400,700"); */
 :root {
-  --time-tr: 0.5s;
-  --depth: 40px;
+  --time-tr: 0.25s;
+
+  --depth: 10px;
+
+  --degree: -5deg;
+
+  --slide-lenght: 15px;
 
   --accent-color: #33a3ee;
   --accent-color-tone: #2982b9;
@@ -14,8 +19,24 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Oswald", sans-serif;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
+  /* font-family: "Oswald", sans-serif; */
+  /* font-family: "Arial", sans-serif; */
+  /* font-family: "Bahnschrift", sans-serif; */
+  /* font-family: "Calibri", sans-serif; */
+  /* font-family: "Candara", sans-serif; */
+  /* font-family: "Cambria", sans-serif; */
+  /* font-family: "Consolas", sans-serif; */
+  /* font-family: "Constantia", sans-serif; */
+  /* font-family: "Corbel", sans-serif; */
+  /* font-family: "Emrima", sans-serif; */
+  /* font-family: "Fixedsys", sans-serif; */
+  /* font-family: "Franklin", sans-serif; */
+  /* font-family: "Gabriola", sans-serif; */
+  /* font-family: "Gadugi", sans-serif; */
+  /* font-family: "Georgia", sans-serif; */
+  /* font-family: "HoloLens MDL2 Assets", sans-serif; */
+  font-family: "Impact", sans-serif;
 }
 
 body {
@@ -28,14 +49,15 @@ body {
 
 ul {
   position: relative;
-  transform: skewY(-15deg);
+  transform: skewY(var(--degree));
 }
 
 ul li {
   position: relative;
   list-style: none;
-  min-width: 100px;
-  border-top: 1px solid var(--accent-color);
+  width: 115px;
+  /* min-width: 100px; */
+  outline: 1px solid var(--mnu-color-after);
   background-color: var(--mnu-color);
   padding: 15px;
   z-index: var(--i);
@@ -43,11 +65,10 @@ ul li {
 }
 
 ul li:hover {
-  /* outline: 1px solid var(--mnu-color); */
-
+  width: 100px;
+  
   background: var(--accent-color);
-  transform: translateX(50px);
-  /* transition: var(--time-tr); */
+  transform: translateX(var(--slide-lenght)); /* transition: var(--time-tr)  */
 }
 
 ul li::before {
@@ -59,8 +80,7 @@ ul li::before {
   height: 100%;
   background: var(--mnu-color-before);
   transform-origin: right;
-  transform: skewY(45deg);
-  /* transition: var(--time-tr); */
+  transform: skewY(45deg); /* transition: var(--time-tr); */
 }
 
 ul li:hover::before {
