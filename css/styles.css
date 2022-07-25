@@ -2,9 +2,9 @@
 :root {
   --time-tr: 0.25s;
 
-  --depth: 10px;
+  --depth: 20px;
 
-  --degree: -5deg;
+  --degree: -15deg;
 
   --slide-lenght: 15px;
 
@@ -65,7 +65,7 @@ ul li {
 }
 
 ul li:hover {
-  width: 100px;
+  /* width: 100px; будет поджиматься*/
   
   background: var(--accent-color);
   transform: translateX(var(--slide-lenght)); /* transition: var(--time-tr)  */
